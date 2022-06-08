@@ -1,0 +1,37 @@
+// .common-font-color {
+//   color: rgb(75, 152, 224);
+//   font-weight: 900;
+// }
+
+// .title {
+//   @extend .common-font-color;
+// }
+
+// .desc {
+//   @extend .common-font-color;
+// }
+
+// .desc2 {
+//   @extend .common-font-color;
+// }
+
+// 假設 class 名稱很長的情況，應該用 @mixin 寫。最後 build 出來的 css 程式碼長度反而會較短
+@mixin common-font-color {
+  color: rgb(75, 152, 224);
+  font-weight: 900;
+}
+
+.title-header-top-1-xxxx {
+  @include common-font-color();
+  font-size: 16px;
+}
+
+.desc-header-top-1-xxxx {
+  @include common-font-color();
+  font-size: 24px;
+}
+
+.desc2-header-top-1-xxxx {
+  @include common-font-color();
+  font-size: 36px;
+}
