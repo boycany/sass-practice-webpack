@@ -1,1 +1,1 @@
-import "./ch08.scss";
+import "./index.scss";

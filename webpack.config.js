@@ -18,7 +18,7 @@ module.exports = {
       {
         test: /\.(css|scss)$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader, //安裝 MiniCssExtract Plugin 把 css 抽離出來，就不需要 style-loader
           {
             loader: "css-loader",
             options: {
