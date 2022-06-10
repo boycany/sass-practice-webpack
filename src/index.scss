@@ -1,1 +1,62 @@
+//index.scss 放自定義的 class
+
 @import "custom";
+
+.custom-element {
+  //可以讓白色混入的 function
+  color: tint-color($primary, 50%);
+}
+
+.custom-element-2 {
+  //可以讓黑色混入的 function
+  color: shade-color($danger, 40%);
+}
+
+.custom-element-3 {
+  color: shift-color($info, 35%);
+}
+
+.custom-element-4 {
+  color: shift-color($info, -35%);
+}
+
+.contrast-element {
+  //變成對比色的function
+  color: color-contrast(pink);
+  background-color: pink;
+}
+
+/*
+// Tint a color: mix a color with white
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+// Shade a color: mix a color with black
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+// Shade the color if the weight is positive, else tint it
+@function shift-color($color, $weight) {
+  @return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight));
+}
+
+-----------------------------------------------------*/
+
+.custom-color-scheme {
+  @include color-scheme(dark) {
+    //Inset dark mode styles here, 這裡下的 css 會塞到下方 bs 內建 @mixin 的 @content 內
+    color: #fff;
+  }
+
+  @include color-scheme(custom-named-scheme) {
+    //Insert custom color scheme styles here
+  }
+}
+
+// @mixin color-scheme($name) {
+//   @media (prefers-color-scheme: #{$name}) {
+//     @content;
+//   }
+// }
