@@ -1,4 +1,4 @@
-/*---- Option A. 全部引入 ----*/
+/*---- 方案A: 全部引入 ----*/
 
 // Include any default variable overrides here (though functions won't be available)
 // 修改的自定義變數，要寫在 @import 上面
@@ -9,17 +9,46 @@
 
 // Then add additional custom code here
 
-/*---- Option B: 引入部份 -----*/
+/*---- 方案B: 引入部份 -----*/
+
+/*****Required (一定要import的有下面三個連結)*****/
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$btn-font-size: 30px;
+$btn-font-size: 22px;
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+
+/***自定義 map 要放在這裡***/
+
+// 直接蓋過整個 theme-colors
+$theme-colors: (
+  "primary": $yellow-300,
+  "secondary": $indigo-300,
+  "success": $teal-300,
+  "info": $info,
+  "warning": $orange-300,
+  "danger": $red-300,
+  "light": $light,
+  "dark": gray,
+);
+
+// Create your own map
+$custom-colors: (
+  "new-color": #900,
+);
+
+// 合併 maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// 移除
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+/*****Optional (這下方可加入任何需要的 components)*****/
 
 // 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/buttons";
