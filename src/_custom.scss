@@ -5,23 +5,34 @@
 
 // $btn-font-size: 30px;
 
-// @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
+// 自定義的 map 必須放在 @import 的下面
 
-/*---- 方案B: 引入部份 -----*/
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 900px,
+  //改成900px
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+//
+@import "../node_modules/bootstrap/scss/containers"; /*---- 方案B: 引入部份 -----*/
 
 /*****Required (一定要import的有下面三個連結)*****/
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/bootstrap/scss/functions";
+// @import "../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
 // $btn-font-size: 22px;
 
 // 3. Include remainder of required Bootstrap stylesheets
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
 
 /***自定義 map 要放在這裡***/
 
@@ -51,7 +62,7 @@
 /*****Optional (這下方可加入任何需要的 components)*****/
 
 // 4. Include any optional Bootstrap components as you like
-@import "../node_modules/bootstrap/scss/buttons";
+// @import "../node_modules/bootstrap/scss/buttons";
 
 //使用 css variables
-@import "../node_modules/bootstrap/scss/root";
+// @import "../node_modules/bootstrap/scss/root";
