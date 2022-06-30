@@ -4,23 +4,26 @@
 // 修改的自定義變數，要寫在 @import 上面
 
 // $btn-font-size: 30px;
+// $enable-grid-classes: false;
+$enable-cssgrid: true;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
 // 自定義的 map 必須放在 @import 的下面
 
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 900px,
-  //改成900px
-  xl: 1140px,
-  xxl: 1320px,
-);
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 900px,
+//   //改成900px
+//   xl: 1140px,
+//   xxl: 1320px,
+// );
 
 //
-@import "../node_modules/bootstrap/scss/containers"; /*---- 方案B: 引入部份 -----*/
+/*---- 方案B: 引入部份 -----*/
+// @import "../node_modules/bootstrap/scss/containers";
 
 /*****Required (一定要import的有下面三個連結)*****/
 

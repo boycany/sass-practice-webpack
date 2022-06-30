@@ -9,15 +9,52 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row row-cols-2">
-            <div class="col box order-5">box</div>
-            <!-- <div class="col box3">box</div> -->
-            <div class="col box2 order-1">box2</div>
-            <div class="col box3 order-2">box3</div>
+    <div class="container">
+        <div class="row gx-3 gy-2 g-lg-0 ">
+            <div class="col-4">
+                <p class="box">box</p>
+            </div>
+            <div class="col-4">
+                <p class="box2">box</p>
+            </div>
+            <div class="col-4">
+                <p class="box3">box3</p>
+            </div>
+            <div class="col-4">
+                <p class="box">box</p>
+            </div>
+            <div class="col-4">
+                <p class="box2">box</p>
+            </div>
+            <div class="col-4">
+                <p class="box3">box3</p>
+            </div>
         </div>
     </div>
 
+    <!-- ch 7-6 -->
+    <div class="grid">
+        <div class="g-col-6 g-col-lg-4 box">box1</div>
+        <div class="g-col-6 g-col-lg-4 box2">box2</div>
+        <div class="g-col-6 g-col-lg-4 box3">box3</div>
+    </div>
+
+    <div class="grid">
+        <div class="g-col-4 g-start-8 box">box</div>
+    </div>
+
+    <div class="grid" style="--bs-columns: 3; --bs-gap: 0">
+        <div class="box2">1</div>
+        <div class="box3">1</div>
+        <div class="box2">1</div>
+        <div class="box3">1</div>
+        <div class="box2">1</div>
+        <div class="box3">1</div>
+        <div class="box2">1</div>
+        <div class="box3">1</div>
+        <div class="box2">1</div>
+        <div class="box g-col-2">1</div>
+    </div>
 </body>
 
 </html>
