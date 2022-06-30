@@ -3,69 +3,70 @@
 // Include any default variable overrides here (though functions won't be available)
 // 修改的自定義變數，要寫在 @import 上面
 
-// $btn-font-size: 30px;
-// $enable-grid-classes: false;
-$enable-cssgrid: true;
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      // responsive: true,  //如果新增的 utility 不需要 RWD，可以避免css檔案太大而不加
+      values: auto pointer grab,
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          values:
+            map-merge(
+              map-get(map-get($utilities, "width"), "values"),
+              (
+                custom: 65%,
+                10: 10%,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "border":
+      map-merge(
+        map-get($utilities, "border"),
+        (
+          responsive: true,
+        )
+      ),
+    "border-width":
+      map-merge(
+        map-get($utilities, "border-width"),
+        (
+          responsive: true,
+        )
+      ),
+    "margin-start":
+      map-merge(
+        map-get($utilities, "margin-start"),
+        (
+          class: ml,
+        )
+      ),
+  )
+);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
 // 自定義的 map 必須放在 @import 的下面
-
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 720px,
-//   lg: 900px,
-//   //改成900px
-//   xl: 1140px,
-//   xxl: 1320px,
-// );
-
-//
-/*---- 方案B: 引入部份 -----*/
-// @import "../node_modules/bootstrap/scss/containers";
-
-/*****Required (一定要import的有下面三個連結)*****/
-
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-// @import "../node_modules/bootstrap/scss/functions";
-
-// 2. Include any default variable overrides here
-// $btn-font-size: 22px;
-
-// 3. Include remainder of required Bootstrap stylesheets
-// @import "../node_modules/bootstrap/scss/variables";
-// @import "../node_modules/bootstrap/scss/mixins";
-
-/***自定義 map 要放在這裡***/
-
-// 直接蓋過整個 theme-colors
-// $theme-colors: (
-//   "primary": $yellow-300,
-//   "secondary": $indigo-300,
-//   "success": $teal-300,
-//   "info": $info,
-//   "warning": $orange-300,
-//   "danger": $red-300,
-//   "light": $light,
-//   "dark": gray,
-// );
-
-// Create your own map
-// $custom-colors: (
-//   "new-color": #900,
-// );
-
-// 合併 maps
-// $theme-colors: map-merge($theme-colors, $custom-colors);
-
-// 移除
-// $theme-colors: map-remove($theme-colors, "info", "light", "dark");
-
-/*****Optional (這下方可加入任何需要的 components)*****/
-
-// 4. Include any optional Bootstrap components as you like
-// @import "../node_modules/bootstrap/scss/buttons";
-
-//使用 css variables
-// @import "../node_modules/bootstrap/scss/root";
