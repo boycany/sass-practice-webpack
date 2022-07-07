@@ -10,40 +10,49 @@
 </head>
 
 <body>
-    <div class="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
-    </div>
-    <div class="alert alert-secondary" role="alert">
-        A simple secondary alert—check it out!
-    </div>
-    <div class="alert alert-success" role="alert">
-        A simple success alert—check it out!
-    </div>
-    <div class="alert alert-danger" role="alert">
-        A simple danger alert—check it out!
-    </div>
-    <div class="alert alert-warning" role="alert">
-        A simple warning alert—check it out!
-    </div>
-    <div class="alert alert-info" role="alert">
-        A simple info alert—check it out!
-    </div>
-    <div class="alert alert-light" role="alert">
-        A simple light alert—check it out!
-    </div>
-    <div class="alert alert-dark" role="alert">
-        A simple dark alert—check it out!
-    </div>
-    <div id="liveAlertPlaceholder"></div>
-    <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
-
+    <h3>Badge 訊息999+的小提醒怎麼作</h3>
     <hr>
-    <h3>Alert 原生操作</h3>
-    <div id="alertCustom" class="alert alert-warning" role="alert">
-        alertCustom
-        <button id="alertCustomBtn" class="btn btn-dark">CLOSE</button>
-    </div>
-
+    <h1>Example Heading <span class="badge bg-secondary">New</span></h1>
+    <h2>Example Heading <span class="badge bg-secondary">New</span></h2>
+    <h3>Example Heading <span class="badge bg-secondary">New</span></h3>
+    <h4>Example Heading <span class="badge bg-secondary">New</span></h4>
+    <hr>
+    <h3>跟按扭結合</h3>
+    <button type="button" class="btn btn-primary">
+        Notifications
+        <span class="badge bg-secondary">4</span>
+    </button>
+    <hr>
+    <h3>搭配絕對定位，實現通知樣式</h3>
+    <button type="button" class="btn btn-primary position-relative">
+        Inbox
+        <span class="
+            position-absolute 
+            top-0 
+            start-100
+            translate-middle 
+            badge 
+            rounded-pill 
+            bg-danger 
+            text-white">99+
+            <span class="visually-hidden">unread messages</span>
+        </span>
+    </button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary position-relative">
+        Profile
+        <span class="
+            position-absolute
+            top-0
+            start-100
+            translate-middle
+            rounded-circle
+            bg-danger
+            p-2   
+            border
+        "><span class="visually-hidden"></span></span>
+    </button>
     <script src="./index.js"></script>
 </body>
 
