@@ -10,49 +10,26 @@
 </head>
 
 <body>
-    <h3>Badge 訊息999+的小提醒怎麼作</h3>
+    <!-- display: grid 作出區塊  -->
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button">Button</button>
+        <button class="btn btn-primary" type="button">Button</button>
+    </div>
     <hr>
-    <h1>Example Heading <span class="badge bg-secondary">New</span></h1>
-    <h2>Example Heading <span class="badge bg-secondary">New</span></h2>
-    <h3>Example Heading <span class="badge bg-secondary">New</span></h3>
-    <h4>Example Heading <span class="badge bg-secondary">New</span></h4>
+    <!-- RWD: 於 md 尺寸時將 display 改為 block -->
+    <div class="d-grid gap-2 d-md-block">
+        <button class="btn btn-primary" type="button">Button</button>
+        <button class="btn btn-primary" type="button">Button</button>
+    </div>
     <hr>
-    <h3>跟按扭結合</h3>
-    <button type="button" class="btn btn-primary">
-        Notifications
-        <span class="badge bg-secondary">4</span>
-    </button>
+    <!-- md 尺寸時將 display 改為 flex -->
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-primary me-md-2" type="button">BTN</button>
+        <button class="btn btn-primary" type="button">Button</button>
+    </div>
     <hr>
-    <h3>搭配絕對定位，實現通知樣式</h3>
-    <button type="button" class="btn btn-primary position-relative">
-        Inbox
-        <span class="
-            position-absolute 
-            top-0 
-            start-100
-            translate-middle 
-            badge 
-            rounded-pill 
-            bg-danger 
-            text-white">99+
-            <span class="visually-hidden">unread messages</span>
-        </span>
-    </button>
-    <br>
-    <br>
-    <button type="button" class="btn btn-primary position-relative">
-        Profile
-        <span class="
-            position-absolute
-            top-0
-            start-100
-            translate-middle
-            rounded-circle
-            bg-danger
-            p-2   
-            border
-        "><span class="visually-hidden"></span></span>
-    </button>
+    <!-- 透過js控制 -->
+    <button type="button" class="btn btn-primary" id="myButton">JS Custom Button</button>
     <script src="./index.js"></script>
 </body>
 
