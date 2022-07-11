@@ -10,113 +10,76 @@
 </head>
 
 <body>
-    <div class="card" style="width: 18rem;">
-        <img src="https://picsum.photos/300/200?random=10" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="card-link">Go somewhere</a>
-            <a href="#" class="card-link">Go somewhere</a>
-        </div>
-    </div>
-    <hr>
-    <div class="card text-center">
-        <div class="card-header">
-            <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="true" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <hr>
-    <div class="card mb-3">
-        <img src="https://picsum.photos/300/200?random=10" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content.
-                This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-    </div>
-    <hr>
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content.
-                This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-        <img src="https://picsum.photos/300/200?random=10" class="card-img-bottom" alt="...">
-    </div>
-    <hr>
-    <div class="card bg-dark text-white">
-        <img src="https://picsum.photos/200/200?random=10" class="card-img" alt="...">
-        <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content.
-                This content is a little bit longer.</p>
-            <p class="card-text">Last updated 3 mins ago</p>
-        </div>
-    </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://picsum.photos/200/200?random=10" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional
-                        content. This content is a little bit longer.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide d-flex carousel-fade" data-bs-ride="carousel">
+        <!-- class 加入 carousel-fade 控制淡入淡出效果 -->
+        <!-- data-bs-ride="carousel" 則控制預設的輪播效果，但若要自己定義使用 js 作輪播效果，就要把這個屬性拔掉，相對地 button 的 data 屬性都要拔掉 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="6000">
+                <img src="/images/BannerImage1202106131004330.jpg" class="d-block w-100" alt="...">
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://picsum.photos/200/200?random=10" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
+            <!-- data-bs-interval 控制輪播時間 -->
+            <div class="carousel-item" data-bs-interval="6000">
+                <img src="/images/BannerImage1202205041550143.jpg" class="d-block w-100" alt="...">
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://picsum.photos/200/200?random=10" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional
-                        content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <img src="/images/BannerImage1202207011437003.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
     </div>
+    <hr>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="text-light w-100 bg-primary d-flex justify-content-center align-items-center"
+                    style="height: 300px">1</div>
+            </div>
+            <div class="carousel-item">
+                <div class="text-light w-100 bg-secondary d-flex justify-content-center align-items-center"
+                    style="height: 300px">2</div>
+            </div>
+            <div class="carousel-item">
+                <div class="text-light w-100 bg-success d-flex justify-content-center align-items-center"
+                    style="height: 300px">3</div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <hr>
+    <h3>JS 自定義控制輪播</h3>
+    <div id="carouselExampleJS" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="text-light w-100 bg-primary d-flex justify-content-center align-items-center"
+                    style="height: 300px">1</div>
+            </div>
+            <div class="carousel-item">
+                <div class="text-light w-100 bg-secondary d-flex justify-content-center align-items-center"
+                    style="height: 300px">2</div>
+            </div>
+            <div class="carousel-item">
+                <div class="text-light w-100 bg-success d-flex justify-content-center align-items-center"
+                    style="height: 300px">3</div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" id="carouselExampleJSPrev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" id="carouselExampleJSNext">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- <script src="./index.js"></script> -->
 </body>
 
 </html>
