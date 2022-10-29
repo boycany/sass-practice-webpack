@@ -10,141 +10,79 @@
 </head>
 
 <body>
-    <div id="carouselExampleSlidesOnly" class="carousel slide d-flex carousel-fade" data-bs-ride="carousel">
-        <!-- class 加入 carousel-fade 控制淡入淡出效果 -->
-        <!-- data-bs-ride="carousel" 則控制預設的輪播效果，但若要自己定義使用 js 作輪播效果，就要把這個屬性拔掉，相對地 button 的 data 屬性都要拔掉 -->
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="6000">
-                <img src="/images/BannerImage1202106131004330.jpg" class="d-block w-100" alt="...">
-            </div>
-            <!-- data-bs-interval 控制輪播時間 -->
-            <div class="carousel-item" data-bs-interval="6000">
-                <img src="/images/BannerImage1202205041550143.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="6000">
-                <img src="/images/BannerImage1202207011437003.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
+    <h3>Button 的 dropdown</h3>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+                <h6 class="dropdown-header">HEADER</h6>
+            </li>
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">LINK</a></li>
+        </ul>
     </div>
     <hr>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="text-light w-100 bg-primary d-flex justify-content-center align-items-center"
-                    style="height: 300px">1</div>
-            </div>
-            <div class="carousel-item">
-                <div class="text-light w-100 bg-secondary d-flex justify-content-center align-items-center"
-                    style="height: 300px">2</div>
-            </div>
-            <div class="carousel-item">
-                <div class="text-light w-100 bg-success d-flex justify-content-center align-items-center"
-                    style="height: 300px">3</div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    <h3>Link 的 dropdown</h3>
+    <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item disabled" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><button class="dropdown-item">BTN</button></li>
+        </ul>
     </div>
     <hr>
-    <h3>JS 自定義控制輪播</h3>
-    <div id="carouselExampleJS" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="text-light w-100 bg-primary d-flex justify-content-center align-items-center"
-                    style="height: 300px">1</div>
-            </div>
-            <div class="carousel-item">
-                <div class="text-light w-100 bg-secondary d-flex justify-content-center align-items-center"
-                    style="height: 300px">2</div>
-            </div>
-            <div class="carousel-item">
-                <div class="text-light w-100 bg-success d-flex justify-content-center align-items-center"
-                    style="height: 300px">3</div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" id="carouselExampleJSPrev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+    <h3>按鈕文字與 icon 分開 + 下拉選單深色模式</h3>
+    <!-- Example split danger button -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger">Action</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
         </button>
-        <button class="carousel-control-next" type="button" id="carouselExampleJSNext">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        <!-- 加一個 class: dropdown-menu-dark 變成深色模式 -->
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
     </div>
     <hr>
-    <br />
-    <div>
-        <p>
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
-                aria-expanded="false" aria-controls="collapseExample">
-                Link with href
-            </a>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
-                aria-expanded="false" aria-controls="collapseExample" id="collapseBtnExample">
-                Button with data-bs-target
-            </button>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when
-                the user
-                activates the relevant trigger.
-            </div>
-        </div>
-        <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eum possimus illum perspiciatis facere
-                enim, expedita fugiat? Nisi tenetur minima asperiores et suscipit, officia necessitatibus doloremque
-                recusandae hic, sapiente aperiam, soluta nemo iusto possimus praesentium. Odio similique molestiae illo
-                maxime, voluptatem, maiores nemo laboriosam optio nesciunt fugit tempore expedita tenetur.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate explicabo, quisquam neque possimus
-                iure voluptas laborum placeat voluptatum eligendi ipsam? Numquam a asperiores illum minima tempora! Quas
-                animi, vel, recusandae, atque tempora sed molestiae aliquam consequuntur molestias possimus alias
-                facilis vero inventore enim magni. Ipsum sapiente quasi autem iste tempora?</p>
-        </div>
-        <div>
-            <p>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                    Toggle width collapse
-                </button>
-            </p>
-            <div style="min-height: 120px;">
-                <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                    <div class="card card-body" style="width: 300px;">
-                        This is some placeholder content for a horizontal collapse. It's hidden by default and shown
-                        when triggered.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <p>
-                <button class="btn btn-primary" type="button" id="collapseBtnExampleJS">
-                    Button Collapse JS
-                </button>
-            </p>
-            <div class="collapse" id="collapseExampleJS">
-                <div class="card card-body">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae illo esse odio perspiciatis
-                    similique nulla rem facere quaerat excepturi dolor?
-                </div>
-            </div>
-        </div>
-        <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, maxime?</p>
-            <p>Rem, sunt non. Praesentium quis nobis suscipit fugit, esse voluptas.</p>
-            <p>Illo eaque eos earum explicabo placeat magni cum dolore laudantium.</p>
-            <p>Laboriosam nesciunt, facere esse odio atque quis cumque earum similique?</p>
-            <p>Laudantium, repudiandae. Ducimus qui officia numquam assumenda mollitia, cupiditate officiis?</p>
-        </div>
+    <h3>JS 控制的 Dropdown Menu</h3>
+    <div class="btn-group">
+        <button class="btn btn-danger dropdown-toggle" id="dropdownBtn" type="button">
+            Dropdown Button
+        </button>
+        <ul class="dropdown-menu">
+            <li>
+                <h6 class="dropdown-header">header</h6>
+            </li>
+            <li><a href="" class="dropdown-item">item</a></li>
+            <li><a href="" class="dropdown-item">item</a></li>
+            <li><a href="" class="dropdown-item">item</a></li>
+            <li><a href="" class="dropdown-item">item</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a href="" class="dropdown-item">item</a></li>
+        </ul>
     </div>
     <!-- <script src="./index.js"></script> -->
 </body>
