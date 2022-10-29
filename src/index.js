@@ -1,16 +1,16 @@
 import "./index.scss";
-import Dropdown from "bootstrap/js/dist/dropdown";
+import Tab from "bootstrap/js/dist/tab";
 
-//須 npm i -D @popperjs/core
-function renderDropdown() {
-    const myDropdownBtn = document.getElementById("dropdownBtn");
-    const bsDropdown = new Dropdown(myDropdownBtn, {
-        autoClose: true,
-    });
+function renderTabs() {
+    const triggerTabList = [].slice.call(document.querySelectorAll("#myTab a"));
+    triggerTabList.forEach((triggerEl) => {
+        const tabTrigger = new Tab(triggerEl);
 
-    myDropdownBtn.addEventListener("click", function () {
-        bsDropdown.toggle();
+        triggerEl.addEventListener("click", function (event) {
+            event.preventDefault();
+            tabTrigger.show();
+        });
     });
 }
 
-renderDropdown();
+renderTabs();

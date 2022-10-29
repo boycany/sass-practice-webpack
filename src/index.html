@@ -10,80 +10,70 @@
 </head>
 
 <body>
-    <h3>Button 的 dropdown</h3>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-                <h6 class="dropdown-header">HEADER</h6>
-            </li>
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">LINK</a></li>
-        </ul>
-    </div>
+    <h1>9-9 List</h1>
     <hr>
-    <h3>Link 的 dropdown</h3>
-    <div class="dropdown">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+    <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+    <br><br>
+    <h3>包含按鈕</h3>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            The current link item
         </a>
-
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item active" href="#">Action</a></li>
-            <li><a class="dropdown-item disabled" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><button class="dropdown-item">BTN</button></li>
-        </ul>
+        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+        <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
     </div>
     <hr>
-    <h3>按鈕文字與 icon 分開 + 下拉選單深色模式</h3>
-    <!-- Example split danger button -->
-    <div class="btn-group">
-        <button type="button" class="btn btn-danger">Action</button>
-        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
-        </button>
-        <!-- 加一個 class: dropdown-menu-dark 變成深色模式 -->
-        <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-        </ul>
+    <br>
+    <h3>Tab 切換</h3>
+    <div role="tabpanel">
+        <!-- List group -->
+        <div class="list-group" id="myList" role="tablist">
+            <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home"
+                role="tab">Home</a>
+            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile"
+                role="tab">Profile</a>
+            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages"
+                role="tab">Messages</a>
+            <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings"
+                role="tab">Settings</a>
+        </div>
+        <br>
+        <!-- Tab panes -->
+        <div class="tab-content ms-3" style="color: red">
+            <div class="tab-pane active" id="home" role="tabpanel">Home...</div>
+            <div class="tab-pane fade" id="profile" role="tabpanel">Profile...</div>
+            <div class="tab-pane" id="messages" role="tabpanel">Messages...</div>
+            <div class="tab-pane fade" id="settings" role="tabpanel">Settings...</div>
+        </div>
     </div>
     <hr>
-    <h3>JS 控制的 Dropdown Menu</h3>
-    <div class="btn-group">
-        <button class="btn btn-danger dropdown-toggle" id="dropdownBtn" type="button">
-            Dropdown Button
-        </button>
-        <ul class="dropdown-menu">
-            <li>
-                <h6 class="dropdown-header">header</h6>
-            </li>
-            <li><a href="" class="dropdown-item">item</a></li>
-            <li><a href="" class="dropdown-item">item</a></li>
-            <li><a href="" class="dropdown-item">item</a></li>
-            <li><a href="" class="dropdown-item">item</a></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a href="" class="dropdown-item">item</a></li>
-        </ul>
+    <h3>用ＪＳ作 Tab 切換</h3>
+    <div role="tabpanel">
+        <!-- List group -->
+        <div class="list-group" id="myTab">
+            <a class="list-group-item list-group-item-action active" href="#myTabHome" role="tab">Home</a>
+            <a class="list-group-item list-group-item-action" href="#myTabProfile" role="tab">Profile</a>
+            <a class="list-group-item list-group-item-action" href="#myTabMessages" role="tab">Messages</a>
+            <a class="list-group-item list-group-item-action" href="#myTabSettings" role="tab">Settings</a>
+        </div>
+        <br>
+        <!-- Tab panes -->
+        <div class="tab-content ms-3" style="color: red">
+            <div class="tab-pane active" id="myTabHome" role="tabpanel">Home...</div>
+            <div class="tab-pane fade" id="myTabProfile" role="tabpanel">Profile...</div>
+            <div class="tab-pane" id="myTabMessages" role="tabpanel">Messages...</div>
+            <div class="tab-pane fade" id="myTabSettings" role="tabpanel">Settings...</div>
+        </div>
     </div>
+    <br><br>
     <!-- <script src="./index.js"></script> -->
 </body>
 
