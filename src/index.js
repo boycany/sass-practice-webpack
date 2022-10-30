@@ -1,20 +1,6 @@
 import "./index.scss";
-import Modal from "bootstrap/js/dist/modal";
 
-function renderModal() {
-    const myModalBtn = document.getElementById("exampleModalJSBtn");
-    const myModalClosedBtn = document.getElementById("exampleModalJSBtnClose");
-    const myModal = document.getElementById("exampleModalJS");
-
-    const myBsModal = new Modal(myModal);
-
-    myModalBtn.addEventListener("click", function () {
-        myBsModal.show();
-    });
-
-    myModalClosedBtn.addEventListener("click", function () {
-        myBsModal.hide();
-    });
-}
-
-renderModal();
+//記得引入 Collapse 才會有折疊效果
+//因為有用到 Dropdown 所以也要引入
+import Collapse from "bootstrap/js/dist/collapse";
+import Dropdown from "bootstrap/js/dist/dropdown";
