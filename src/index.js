@@ -1,16 +1,20 @@
 import "./index.scss";
-import Tab from "bootstrap/js/dist/tab";
+import Modal from "bootstrap/js/dist/modal";
 
-function renderTabs() {
-    const triggerTabList = [].slice.call(document.querySelectorAll("#myTab a"));
-    triggerTabList.forEach((triggerEl) => {
-        const tabTrigger = new Tab(triggerEl);
+function renderModal() {
+    const myModalBtn = document.getElementById("exampleModalJSBtn");
+    const myModalClosedBtn = document.getElementById("exampleModalJSBtnClose");
+    const myModal = document.getElementById("exampleModalJS");
 
-        triggerEl.addEventListener("click", function (event) {
-            event.preventDefault();
-            tabTrigger.show();
-        });
+    const myBsModal = new Modal(myModal);
+
+    myModalBtn.addEventListener("click", function () {
+        myBsModal.show();
+    });
+
+    myModalClosedBtn.addEventListener("click", function () {
+        myBsModal.hide();
     });
 }
 
-renderTabs();
+renderModal();
