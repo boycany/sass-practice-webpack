@@ -2,24 +2,24 @@
 
 @import "custom";
 
-.box {
-  width: 100%;
-  height: 100px;
-  background-color: rgb(135, 222, 135);
-}
+// .box {
+//   width: 100%;
+//   height: 100px;
+//   background-color: rgb(135, 222, 135);
+// }
 
-.box2 {
-  width: 100%;
-  height: 100px;
-  background-color: rgb(135, 187, 222);
-}
+// .box2 {
+//   width: 100%;
+//   height: 100px;
+//   background-color: rgb(135, 187, 222);
+// }
 
-.box3 {
-  width: 100%;
-  height: 100px;
-  background-color: burlywood;
-}
+// .box3 {
+//   width: 100%;
+//   height: 100px;
+//   background-color: burlywood;
+// }
 
-.custom-container {
-  @include make-container();
-}
+// .custom-container {
+//   @include make-container();
+// }
