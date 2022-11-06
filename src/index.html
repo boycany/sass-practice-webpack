@@ -10,15 +10,30 @@
 </head>
 
 <body>
-    <div class="spinner-border m-5" role="status">
-        <span class="visually-hidden">Loading...</span>
+    <div class="card">
+        <img src="https://picsum.photos/300/200?random=10" class="card-img-top w-25" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
     </div>
-    <div class="spinner-border m-5 text-primary" role="status">
-        <span class="">Loading...</span>
-    </div>
-    <div class="d-flex justify-content-center">
-        <div class=" spinner-border" role="status">
-            <span class="">Loading...</span>
+
+    <div class="card" aria-hidden="true">
+        <img src="https://picsum.photos/300/200?random=10" class="card-img-top w-25" alt="...">
+        <div class="card-body">
+            <h1 class="card-title placeholder-glow">
+                <span class="placeholder col-12 "></span>
+            </h1>
+            <p class="card-text placeholder-glow">
+                <span class="placeholder col-7 placeholder-xs"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4 placeholder-lg"></span>
+                <span class="placeholder col-6 bg-primary"></span>
+                <span class="placeholder col-8 bg-danger"></span>
+            </p>
+            <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
         </div>
     </div>
     <!-- <script src="./index.js"></script> -->
